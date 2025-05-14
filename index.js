@@ -50,7 +50,7 @@ class LYGOS {
                 resolve(response.data);
             } catch (e) {
                 const statusCode = e.response ? e.response.status : 500;
-                const message = e.response && e.response.data ? e.response.data.details.message : "Erreur inconnue";
+                const message = e.response && e.response.data ? e.response.data.detail.message : "Erreur inconnue";
                 resolve({ error: message, status: statusCode });
             }
         });
